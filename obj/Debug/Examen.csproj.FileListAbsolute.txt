@@ -1,0 +1,30 @@
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\bin\Debug\Examen.exe.config
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\bin\Debug\Examen.exe
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\bin\Debug\Examen.pdb
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.csproj.AssemblyReference.cache
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Main.autorization.resources
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Main.Main.resources
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Properties.Resources.resources
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.csproj.GenerateResource.cache
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.csproj.CoreCompileInputs.cache
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.exe
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.pdb
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Main.Registration.resources
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Main.Lichnoe.resources
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Main.Mainform.resources
+C:\Users\24-тппоповкд\source\repos\Examen\Examen\obj\Debug\Examen.Main.HistoryForm.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\bin\Debug\Examen.exe.config
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\bin\Debug\Examen.exe
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\bin\Debug\Examen.pdb
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.csprojAssemblyReference.cache
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Main.autorization.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Main.HistoryForm.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Main.Lichnoe.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Main.Main.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Main.Mainform.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Main.Registration.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.Properties.Resources.resources
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.csproj.GenerateResource.cache
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.csproj.CoreCompileInputs.cache
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.exe
+C:\Users\27-бдКадниковДС\Desktop\Новая папка\Examen\obj\Debug\Examen.pdb

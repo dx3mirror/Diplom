@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6878AD8E-98DA-4FF8-BF31-9E7465C4C1C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Examen</RootNamespace>
+    <AssemblyName>Examen</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words, Version=23.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.23.3.0\lib\net461\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words.Pdf2Word, Version=23.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Words.23.3.0\lib\net461\Aspose.Words.Pdf2Word.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\inventory_management_desktop_app-master\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\inventory_management_desktop_app-master\bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\inventory_management_desktop_app-master\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UiPath.Interop, Version=9.0.6736.25843, Culture=neutral, PublicKeyToken=461894da7f0ba157, processorArchitecture=MSIL">
+      <HintPath>..\packages\UiPath.9.0.6736.25739\lib\UiPath.Interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\Animation.cs" />
+    <Compile Include="Animation\Animator.cs" />
+    <Compile Include="Components\EgoldsFormStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\EgoldsFormStyle.Designer.cs">
+      <DependentUpon>EgoldsFormStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EgoldsStyle.cs" />
+    <Compile Include="Components\RoundingButtonsComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\RoundingButtonsComponent.Designer.cs">
+      <DependentUpon>RoundingButtonsComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EgoldsCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EgoldsGoogleTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EgoldsProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EgoldsRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EgoldsToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\yt_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Database.cs" />
+    <Compile Include="Core\Drawer.cs" />
+    <Compile Include="Core\FlatColors.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\aboutUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\aboutUsers.Designer.cs">
+      <DependentUpon>aboutUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\autorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\autorization.Designer.cs">
+      <DependentUpon>autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Buy.Designer.cs">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Doljnost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Doljnost.Designer.cs">
+      <DependentUpon>Doljnost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\SotrudnikDopDokument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\SotrudnikDopDokument.Designer.cs">
+      <DependentUpon>SotrudnikDopDokument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Infomaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Infomaterial.Designer.cs">
+      <DependentUpon>Infomaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MaterialSklad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MaterialSklad.Designer.cs">
+      <DependentUpon>MaterialSklad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\MaterialUSER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\MaterialUSER.Designer.cs">
+      <DependentUpon>MaterialUSER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Redaktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Redaktor.Designer.cs">
+      <DependentUpon>Redaktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Staj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Staj.Designer.cs">
+      <DependentUpon>Staj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\InformationFamilySotrudnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\InformationFamilySotrudnik.Designer.cs">
+      <DependentUpon>InformationFamilySotrudnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Formbin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Formbin.Designer.cs">
+      <DependentUpon>Formbin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FormbinUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FormbinUsers.Designer.cs">
+      <DependentUpon>FormbinUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\graal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\graal.Designer.cs">
+      <DependentUpon>graal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\GraalUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\GraalUsers.Designer.cs">
+      <DependentUpon>GraalUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Lichnoe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Lichnoe.Designer.cs">
+      <DependentUpon>Lichnoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\InformationObrozovaniySotrudnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\InformationObrozovaniySotrudnik.Designer.cs">
+      <DependentUpon>InformationObrozovaniySotrudnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\PassportSotrudnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\PassportSotrudnik.Designer.cs">
+      <DependentUpon>PassportSotrudnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\postavjiki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\postavjiki.Designer.cs">
+      <DependentUpon>postavjiki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\sfera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\sfera.Designer.cs">
+      <DependentUpon>sfera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\SferaUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\SferaUsers.Designer.cs">
+      <DependentUpon>SferaUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\InformationSotrudnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\InformationSotrudnik.Designer.cs">
+      <DependentUpon>InformationSotrudnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Print.cs" />
+    <Compile Include="Main\WarUchet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\WarUchet.Designer.cs">
+      <DependentUpon>WarUchet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ShadowedForm.resx">
+      <DependentUpon>ShadowedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\aboutUsers.resx">
+      <DependentUpon>aboutUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\autorization.resx">
+      <DependentUpon>autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Buy.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Doljnost.resx">
+      <DependentUpon>Doljnost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\SotrudnikDopDokument.resx">
+      <DependentUpon>SotrudnikDopDokument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Infomaterial.resx">
+      <DependentUpon>Infomaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MaterialSklad.resx">
+      <DependentUpon>MaterialSklad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\MaterialUSER.resx">
+      <DependentUpon>MaterialUSER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Redaktor.resx">
+      <DependentUpon>Redaktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Staj.resx">
+      <DependentUpon>Staj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\InformationFamilySotrudnik.resx">
+      <DependentUpon>InformationFamilySotrudnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Formbin.resx">
+      <DependentUpon>Formbin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FormbinUsers.resx">
+      <DependentUpon>FormbinUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\graal.resx">
+      <DependentUpon>graal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\GraalUsers.resx">
+      <DependentUpon>GraalUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Lichnoe.resx">
+      <DependentUpon>Lichnoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\InformationObrozovaniySotrudnik.resx">
+      <DependentUpon>InformationObrozovaniySotrudnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\PassportSotrudnik.resx">
+      <DependentUpon>PassportSotrudnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\postavjiki.resx">
+      <DependentUpon>postavjiki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\sfera.resx">
+      <DependentUpon>sfera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\SferaUsers.resx">
+      <DependentUpon>SferaUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\InformationSotrudnik.resx">
+      <DependentUpon>InformationSotrudnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\WarUchet.resx">
+      <DependentUpon>WarUchet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="bin\Debug\TrudDog.docx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DispPrikaz-.docx" />
+    <None Include="Resources\options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schet-dogovor-postavki-tovara.xlsx" />
+    <None Include="Resources\t-8-prikaz-ob-uvolnenii.xls" />
+    <None Include="Resources\T2 Form.xls" />
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206469_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438215397_edit-find-replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sfera_big.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-chalice-holy-grail-sacred-symbol-blessing-communion-miscellaneous-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206502_Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1286853.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206566_User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206747_user-group-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-two-passports-icon-outline-style-png-image_1826563.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\значок-паспорта-вектора-изолированный-на-белой-предпосылке-145316830.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\значок-паспорта-вектора-изолированный-на-белой-предпосылке-1453168301.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206566_User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206469_Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206541_Stock Index Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1438206457_Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\244109.png" />
+    <None Include="Resources\md_5b33460fe6357.jpg" />
+    <None Include="Resources\png-transparent-passport-icon-red-passport-miscellaneous-rectangle-logo.png" />
+    <None Include="Resources\семтя.png" />
+    <None Include="Resources\Оброзование.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\UiPath.9.0.6736.25739\build\UiPath.targets" Condition="Exists('..\packages\UiPath.9.0.6736.25739\build\UiPath.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\UiPath.9.0.6736.25739\build\UiPath.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UiPath.9.0.6736.25739\build\UiPath.targets'))" />
+  </Target>
+</Project>
