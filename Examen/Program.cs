@@ -14,9 +14,11 @@ namespace Examen
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main.Registration());
+            Application.Run(new Main.autorization());
+
         }
     }
 }

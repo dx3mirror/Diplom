@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PP_KADNIKOV3Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdditionalDocuments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk" Type="int" />
+    <Property Name="SNILS" Type="varchar" MaxLength="30" />
+    <Property Name="POLIS" Type="varchar" MaxLength="30" />
+    <Property Name="INN" Type="varchar" MaxLength="30" />
+    <Property Name="KPP" Type="varchar" MaxLength="30" />
+    <Property Name="TrudKnijka" Type="varchar" MaxLength="30" />
+    <Property Name="MedKnikjka" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="doljnost">
+    <Key>
+      <PropertyRef Name="ID_D" />
+    </Key>
+    <Property Name="ID_D" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_kod_sotrudnik" Type="int" />
+    <Property Name="naimenoviy_doljnosti" Type="varchar(max)" />
+    <Property Name="s_kogo" Type="varchar(max)" />
+    <Property Name="po_kokoe" Type="varchar(max)" />
+    <Property Name="kol_vo" Type="int" />
+    <Property Name="otvetstveniy" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_Sotrudnik" Type="int" />
+    <Property Name="obchyi_day" Type="varchar" MaxLength="50" />
+    <Property Name="obchyi_month" Type="varchar" MaxLength="50" />
+    <Property Name="obchyi_year" Type="varchar" MaxLength="50" />
+    <Property Name="nepreryvniy_day" Type="varchar" MaxLength="50" />
+    <Property Name="nepreryvniy_month" Type="varchar" MaxLength="50" />
+    <Property Name="nepreryvniy_year" Type="varchar" MaxLength="50" />
+    <Property Name="vislugalet_day" Type="varchar" MaxLength="50" />
+    <Property Name="vislugalet_month" Type="varchar" MaxLength="50" />
+    <Property Name="vislugalet_year" Type="varchar" MaxLength="50" />
+    <Property Name="stajrabotyposostoyaniyna" Type="date" />
+    <Property Name="del" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Family">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_sotrudnik" Type="int" />
+    <Property Name="FIO" Type="varchar" MaxLength="150" />
+    <Property Name="stepen_rodstva" Type="varchar" MaxLength="50" />
+    <Property Name="data_rojdeniya" Type="date" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="varchar(max)" />
+    <Property Name="ТабельныйНомер" Type="varchar(max)" />
+    <Property Name="Колличество" Type="varchar(max)" />
+    <Property Name="Качество" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Obrazovanie">
+    <Key>
+      <PropertyRef Name="ID_OB" />
+    </Key>
+    <Property Name="ID_OB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_kod_sotrudnika" Type="int" />
+    <Property Name="obrazovanie" Type="varchar" MaxLength="150" />
+    <Property Name="nazvanieuchrejdeniya" Type="varchar" MaxLength="150" />
+    <Property Name="kvalifikachiyapoObrazovaniyu" Type="varchar" MaxLength="150" />
+    <Property Name="nazvanieuchrejdeniya2" Type="varchar" MaxLength="150" />
+    <Property Name="kvalifikachiyapoObrazovaniyu2" Type="varchar" MaxLength="150" />
+    <Property Name="poslevuzovoe" Type="varchar" MaxLength="150" />
+    <Property Name="professiaOsnova" Type="varchar" MaxLength="150" />
+    <Property Name="professiaDopolnitel" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PP_KADNIKOV3.dbo.Otpusk" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Otpusk">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_sotrudnik" Type="int" />
+    <Property Name="vid_otpuska" Type="varchar" MaxLength="50" />
+    <Property Name="period_s" Type="date" />
+    <Property Name="period_po" Type="date" />
+    <Property Name="day" Type="varchar" MaxLength="10" />
+    <Property Name="S_kakogo" Type="date" />
+    <Property Name="po_kakoe" Type="date" />
+    <Property Name="prichina" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Passport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_Sotrudnik" Type="int" />
+    <Property Name="nomer_pasporta" Type="varchar" MaxLength="13" />
+    <Property Name="datavidachi" Type="date" />
+    <Property Name="dataregistrachii_po_mestu" Type="date" />
+    <Property Name="vidan" Type="varchar" MaxLength="150" />
+    <Property Name="adressjitelstva_popasportu" Type="varchar" MaxLength="150" />
+    <Property Name="aress_fakticheskiy" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Postavki">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KtoOstavilZayvku" Type="varchar" MaxLength="50" />
+    <Property Name="NaimenovaniyTovara" Type="varchar" MaxLength="40" />
+    <Property Name="NaimenovaniyTovara1" Type="varchar" MaxLength="40" />
+    <Property Name="NaimenovaniyTovara2" Type="varchar" MaxLength="40" />
+    <Property Name="NaimenovaniyTovara3" Type="varchar" MaxLength="40" />
+    <Property Name="NaimenovaniyTovara4" Type="varchar" MaxLength="40" />
+    <Property Name="NaimenovaniyTovara5" Type="varchar" MaxLength="40" />
+    <Property Name="Kolvo" Type="int" />
+    <Property Name="Cena" Type="money" />
+    <Property Name="Summa" Type="int" />
+    <Property Name="INN" Type="int" />
+    <Property Name="KPP" Type="int" />
+    <Property Name="Poluhatel" Type="varchar" MaxLength="50" />
+    <Property Name="Bank" Type="varchar" MaxLength="20" />
+    <Property Name="Adress" Type="varchar" MaxLength="35" />
+    <Property Name="NomerCheta" Type="int" />
+    <Property Name="Rukovoditelpredpriytiy" Type="varchar" MaxLength="40" />
+    <Property Name="Buhalter" Type="varchar" MaxLength="40" />
+    <Property Name="DataRazmejeniy" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="Sklad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_kod_material" Type="int" Nullable="false" />
+    <Property Name="НомерСклада" Type="int" />
+    <Property Name="ДатаПрибытияТовара" Type="datetime" />
+    <Property Name="ОсобыеУсловияХранения" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Sotrudnik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" />
+    <Property Name="nam" Type="varchar" MaxLength="50" />
+    <Property Name="patronomic" Type="varchar" MaxLength="50" />
+    <Property Name="telefon" Type="nchar" MaxLength="11" />
+    <Property Name="adress" Type="varchar" MaxLength="50" />
+    <Property Name="mestorojdenia" Type="varchar" MaxLength="50" />
+    <Property Name="datarojdeniya" Type="date" />
+    <Property Name="in_yaz" Type="varchar" MaxLength="50" />
+    <Property Name="grajdanstvo" Type="varchar" MaxLength="50" />
+    <Property Name="brak" Type="varchar" MaxLength="50" />
+    <Property Name="del" Type="varchar" MaxLength="3" />
+    <Property Name="uvolen" Type="nvarchar" MaxLength="200" />
+    <Property Name="mesto_rojd" Type="varchar" MaxLength="50" />
+    <Property Name="Pol" Type="varchar" MaxLength="12" />
+    <Property Name="Identitynomer" Type="varchar" MaxLength="20" />
+    <Property Name="OKIN" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="transactionOp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="summa" Type="money" />
+    <Property Name="dataZakupki" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Transactionprogram">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameLog" Type="varchar" MaxLength="50" />
+    <Property Name="DateLog" Type="datetime" />
+  </EntityType>
+  <EntityType Name="usersProgram">
+    <Key>
+      <PropertyRef Name="ID_dol" />
+    </Key>
+    <Property Name="ID_dol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="loginI" Type="varchar" MaxLength="60" />
+    <Property Name="PasI" Type="varchar" MaxLength="60" />
+    <Property Name="acces" Type="varchar" MaxLength="30" />
+    <Property Name="Avatar" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Waruchet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_sotrudnik" Type="int" />
+    <Property Name="Kategorya" Type="varchar" MaxLength="50" />
+    <Property Name="Zvanie" Type="varchar" MaxLength="50" />
+    <Property Name="Sostav" Type="varchar" MaxLength="50" />
+    <Property Name="kod_VUS" Type="varchar" MaxLength="50" />
+    <Property Name="Sostoyanie_voinskogo" Type="varchar" MaxLength="50" />
+    <Property Name="Nazvanie_komisariata" Type="varchar" MaxLength="50" />
+    <Property Name="Kategoria" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZayvleniyRegestration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="20" />
+    <Property Name="FirstName" Type="varchar" MaxLength="30" />
+    <Property Name="Patronomic" Type="varchar" MaxLength="30" />
+    <Property Name="Telefon" Type="varchar" MaxLength="12" />
+    <Property Name="Avatar" Type="image" />
+    <Property Name="Dol" Type="varchar" MaxLength="30" />
+    <Property Name="PasswordN" Type="varchar" MaxLength="100" />
+    <Property Name="Login" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_doljnost_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="doljnost" Type="Self.doljnost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="doljnost">
+        <PropertyRef Name="fk_kod_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Experience_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Experience" Type="Self.Experience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Experience">
+        <PropertyRef Name="FK_Sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Family_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Family" Type="Self.Family" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Family">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obrazovanie_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Obrazovanie" Type="Self.Obrazovanie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obrazovanie">
+        <PropertyRef Name="fk_kod_sotrudnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Otpusk_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Otpusk" Type="Self.Otpusk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Otpusk">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Passport_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Passport">
+        <PropertyRef Name="FK_Sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sklad_Material">
+    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Sklad" Type="Self.Sklad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sklad">
+        <PropertyRef Name="fk_kod_material" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Waruchet_Sotrudnik">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Waruchet" Type="Self.Waruchet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Waruchet">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddSotrudnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fam" Type="varchar" Mode="In" />
+    <Parameter Name="nam" Type="varchar" Mode="In" />
+    <Parameter Name="oth" Type="varchar" Mode="In" />
+    <Parameter Name="tel" Type="nchar" Mode="In" />
+    <Parameter Name="dat" Type="date" Mode="In" />
+    <Parameter Name="english" Type="varchar" Mode="In" />
+    <Parameter Name="grajdan" Type="varchar" Mode="In" />
+    <Parameter Name="brak" Type="varchar" Mode="In" />
+    <Parameter Name="mRojd" Type="varchar" Mode="In" />
+    <Parameter Name="mPol" Type="varchar" Mode="In" />
+    <Parameter Name="idennam" Type="varchar" Mode="In" />
+    <Parameter Name="mOKIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="LoadGridSotrudnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateSotrudnik" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="fam" Type="varchar" Mode="In" />
+    <Parameter Name="nam" Type="varchar" Mode="In" />
+    <Parameter Name="oth" Type="varchar" Mode="In" />
+    <Parameter Name="tel" Type="nchar" Mode="In" />
+    <Parameter Name="dat" Type="date" Mode="In" />
+    <Parameter Name="english" Type="varchar" Mode="In" />
+    <Parameter Name="grajdan" Type="varchar" Mode="In" />
+    <Parameter Name="brak" Type="varchar" Mode="In" />
+    <Parameter Name="mRojd" Type="varchar" Mode="In" />
+    <Parameter Name="mPol" Type="varchar" Mode="In" />
+    <Parameter Name="idennam" Type="varchar" Mode="In" />
+    <Parameter Name="mOKIN" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="Хранилище PP_KADNIKOV3ModelContainer">
+    <EntitySet Name="AdditionalDocuments" EntityType="Self.AdditionalDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="doljnost" EntityType="Self.doljnost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Family" EntityType="Self.Family" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material" EntityType="Self.Material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Obrazovanie" EntityType="Self.Obrazovanie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Passport" EntityType="Self.Passport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Postavki" EntityType="Self.Postavki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sklad" EntityType="Self.Sklad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sotrudnik" EntityType="Self.Sotrudnik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transactionOp" EntityType="Self.transactionOp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transactionprogram" EntityType="Self.Transactionprogram" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersProgram" EntityType="Self.usersProgram" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Waruchet" EntityType="Self.Waruchet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZayvleniyRegestration" EntityType="Self.ZayvleniyRegestration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Otpusk" EntityType="Self.Otpusk" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Otpusk].[ID] AS [ID], 
+    [Otpusk].[FK_sotrudnik] AS [FK_sotrudnik], 
+    [Otpusk].[vid_otpuska] AS [vid_otpuska], 
+    [Otpusk].[period_s] AS [period_s], 
+    [Otpusk].[period_po] AS [period_po], 
+    [Otpusk].[day] AS [day], 
+    [Otpusk].[S_kakogo] AS [S_kakogo], 
+    [Otpusk].[po_kakoe] AS [po_kakoe], 
+    [Otpusk].[prichina] AS [prichina]
+    FROM [dbo].[Otpusk] AS [Otpusk]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_doljnost_Sotrudnik" Association="Self.FK_doljnost_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="doljnost" EntitySet="doljnost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Experience_Sotrudnik" Association="Self.FK_Experience_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Experience" EntitySet="Experience" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Family_Sotrudnik" Association="Self.FK_Family_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Family" EntitySet="Family" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obrazovanie_Sotrudnik" Association="Self.FK_Obrazovanie_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Obrazovanie" EntitySet="Obrazovanie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Otpusk_Sotrudnik" Association="Self.FK_Otpusk_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Otpusk" EntitySet="Otpusk" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Passport_Sotrudnik" Association="Self.FK_Passport_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Passport" EntitySet="Passport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sklad_Material" Association="Self.FK_Sklad_Material">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="Sklad" EntitySet="Sklad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Waruchet_Sotrudnik" Association="Self.FK_Waruchet_Sotrudnik">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Waruchet" EntitySet="Waruchet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

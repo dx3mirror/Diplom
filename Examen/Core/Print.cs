@@ -1,12 +1,10 @@
 ﻿using Examen.Core;
 using Excel = Microsoft.Office.Interop.Excel;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aspose.Words;
+using SautinSoft;
+
 
 namespace Examen
 {
@@ -19,23 +17,14 @@ namespace Examen
 
         public static void Othet(DataGridView DGV_Sotrudniki)
         {
-            
             string tempPath = System.IO.Path.GetTempFileName();
-
             System.IO.File.WriteAllBytes(tempPath, Properties.Resources.T2_Form);
-
             Excel.Application excelApplication = new Excel.Application();
             Excel._Workbook excelWorkbook;
             excelWorkbook = excelApplication.Workbooks.Open(tempPath);
-
             Excel.Worksheet worksheet = excelWorkbook.Sheets[1];
-
             Excel.Range r1 = worksheet.Range[worksheet.Cells[24, 2], worksheet.Cells[26, 2]];
-
             worksheet.Name = "Личная карточка сотрудника";
-
-
-
             string sqlText = $@"SELECT                      
                                                             [ID],
                                                             [lastname],
@@ -60,16 +49,11 @@ namespace Examen
                                                             [obrazovanie]
                                                             FROM     Sotrudnik , doljnost,
                   Obrazovanie  where Sotrudnik.ID = Obrazovanie.fk_kod_sotrudnika AND Sotrudnik.ID = doljnost.fk_kod_sotrudnik AND Sotrudnik.ID = @currValue";
-
-
-
             SqlConnection conn = new SqlConnection(Core.Database.con);
             using (SqlCommand cmd = new SqlCommand(sqlText, conn))
             {
                 cmd.Parameters.AddWithValue("@currValue", DGV_Sotrudniki.CurrentRow.Cells[0].Value.ToString());
                 conn.Open();
-
-
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -98,16 +82,9 @@ namespace Examen
                         worksheet.Cells[40, 1] = dr["nazvanieuchrejdeniya2"];
                         worksheet.Cells[43, 1] = dr["kvalifikachiyapoObrazovaniyu2"];
                         worksheet.Cells[46, 5] = dr["poslevuzovoe"];
-
-
-
-
-
-
                     }
                 }
             }
-
             excelApplication.Visible = true;
             excelApplication.UserControl = true;
             r1.WrapText = true;
@@ -169,20 +146,30 @@ namespace Examen
             r1.WrapText = true;
         }
 
-        public static void DiscpPrikaz (DataGridView DGV_Sotrudniki)
-        {
-            Microsoft.Office.Interop.Word.Application application = new Microsoft.Office.Interop.Word.Application();
-            object fileName = System.Windows.Forms.Application.StartupPath + "\\DispPrikaz-.docx";
-            Microsoft.Office.Interop.Word.Document document = application.Documents.Add(ref fileName);
-            document.Variables["ID"].Value = DGV_Sotrudniki.CurrentRow.Cells[0].Value.ToString();
-            document.Variables["UserName"].Value = DGV_Sotrudniki.CurrentRow.Cells[1].Value.ToString() + " " +
+        
+            public static void DiscpPrikaz(DataGridView DGV_Sotrudniki)
+            {
+
+                Microsoft.Office.Interop.Word.Application application = new Microsoft.Office.Interop.Word.Application();
+                object fileName = System.Windows.Forms.Application.StartupPath + "\\DispPrikaz-.docx";
+                Microsoft.Office.Interop.Word.Document document = application.Documents.Add(ref fileName);
+                var doc = new Document(System.Windows.Forms.Application.StartupPath + "\\DispPrikaz-.docx");
+                document.Variables["ID"].Value = DGV_Sotrudniki.CurrentRow.Cells[0].Value.ToString();
+                document.Variables["UserName"].Value = DGV_Sotrudniki.CurrentRow.Cells[1].Value.ToString() + " " +
+                    DGV_Sotrudniki.CurrentRow.Cells[2].Value.ToString() + " " +
+                    DGV_Sotrudniki.CurrentRow.Cells[3].Value.ToString();
+                document.Variables["Doljnost"].Value = DGV_Sotrudniki.CurrentRow.Cells[0].Value.ToString();
+
+                document.Variables["DockStyle"].Value = DGV_Sotrudniki.CurrentRow.Cells[1].Value.ToString() + " " +
                 DGV_Sotrudniki.CurrentRow.Cells[2].Value.ToString() + " " +
                 DGV_Sotrudniki.CurrentRow.Cells[3].Value.ToString();
-            document.Variables["Doljnost"].Value = DGV_Sotrudniki.CurrentRow.Cells[0].Value.ToString();
+                document.Fields.Update();
+                application.Visible = true;
+                doc.Save(System.Windows.Forms.Application.StartupPath + "\\DispPrikaz-.pdf");
 
-            document.Fields.Update();
-            application.Visible = true;
-        }
+            }
+        
+
 
         public static void TrudPrikaz (DataGridView DGV_Sotrudniki)
         {
