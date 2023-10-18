@@ -8,12 +8,12 @@ namespace Examen.Core
 {
     public class UnitOfWorkUpdate : IUnitOfWorkUpdate
     {
-        private readonly Models.PP_KADNIKOV3Entities _context;
+        private readonly Base.PP_KADNIKOV3Entities _context;
         private ISotrudnikRepositoryUpdate _sotrudnikRepositoryUpdate;
 
         public UnitOfWorkUpdate()
         {
-            _context = new Models.PP_KADNIKOV3Entities();
+            _context = new Base.PP_KADNIKOV3Entities();
         }
 
         public ISotrudnikRepositoryUpdate SotrudnikRepositoryUpdate

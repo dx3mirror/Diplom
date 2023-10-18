@@ -1,4 +1,4 @@
-﻿using Examen.Models;
+﻿using Examen.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Examen.Core
 {
     public class SotrudnikRepositoryAdd : IRepositorySotrudnik<Sotrudnik>
     {
-        private Models.PP_KADNIKOV3Entities context;
+        private Base.PP_KADNIKOV3Entities context;
 
-        public SotrudnikRepositoryAdd(Models.PP_KADNIKOV3Entities context)
+        public SotrudnikRepositoryAdd(Base.PP_KADNIKOV3Entities context)
         {
             this.context = context;
         }

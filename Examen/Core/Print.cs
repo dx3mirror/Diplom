@@ -1,9 +1,8 @@
-﻿using Examen.Core;
-using Excel = Microsoft.Office.Interop.Excel;
+﻿using Excel = Microsoft.Office.Interop.Excel;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Aspose.Words;
-using SautinSoft;
+
 
 
 namespace Examen

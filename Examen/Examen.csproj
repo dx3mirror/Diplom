@@ -42,14 +42,35 @@
     <Reference Include="Aspose.Words.Pdf2Word, Version=23.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Words.23.3.0\lib\net461\Aspose.Words.Pdf2Word.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.2.1\lib\Bunifu.Licensing.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bunifu.UI.WinForms.1.5.3.1.0.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
@@ -288,6 +309,57 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\AdditionalDocuments.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\doljnost.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Experience.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Family.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Obrazovanie.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Otpusk.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Passport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Sotrudnik.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Transactionprogram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\usersProgram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Waruchet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ZayvleniyJob.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Core\AddCommand.cs" />
     <Compile Include="Core\AdditionalDocumentsRepository.cs" />
     <Compile Include="Core\BaseRegistrationChecker.cs" />
@@ -380,207 +452,132 @@
     <Compile Include="Core\FlatColors.cs" />
     <Compile Include="Core\IRepository.cs" />
     <Compile Include="Core\PassportRepository.cs" />
-    <Compile Include="frmMain.cs">
+    <Compile Include="Models\AuthorizationModel.cs" />
+    <Compile Include="Presenter\AuthorizationPresenter.cs" />
+    <Compile Include="Presenter\FormbinPresenter.cs" />
+    <Compile Include="View\autorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AdditionalDocuments.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Database.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Database.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Database.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\doljnost.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Experience.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Family.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LoadGridSotrudnik_Result.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Obrazovanie.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Orders.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Otpusk.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Passport.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Sotrudnik.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Transactionprogram.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\usersProgram.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Waruchet.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ZayvleniyJob.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Presenter\autorization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presenter\autorization.Designer.cs">
+    <Compile Include="View\autorization.Designer.cs">
       <DependentUpon>autorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\Doljnost.cs">
+    <Compile Include="View\Doljnost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\Doljnost.Designer.cs">
+    <Compile Include="View\Doljnost.Designer.cs">
       <DependentUpon>Doljnost.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\SotrudnikDopDokument.cs">
+    <Compile Include="View\IAuthorizationView.cs" />
+    <Compile Include="View\IFormbinView.cs" />
+    <Compile Include="View\SotrudnikDopDokument.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\SotrudnikDopDokument.Designer.cs">
+    <Compile Include="View\SotrudnikDopDokument.Designer.cs">
       <DependentUpon>SotrudnikDopDokument.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\Redaktor.cs">
+    <Compile Include="View\Redaktor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\Redaktor.Designer.cs">
+    <Compile Include="View\Redaktor.Designer.cs">
       <DependentUpon>Redaktor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\Staj.cs">
+    <Compile Include="View\Staj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\Staj.Designer.cs">
+    <Compile Include="View\Staj.Designer.cs">
       <DependentUpon>Staj.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\InformationFamilySotrudnik.cs">
+    <Compile Include="View\InformationFamilySotrudnik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\InformationFamilySotrudnik.Designer.cs">
+    <Compile Include="View\InformationFamilySotrudnik.Designer.cs">
       <DependentUpon>InformationFamilySotrudnik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\Formbin.cs">
+    <Compile Include="View\Formbin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\Formbin.Designer.cs">
+    <Compile Include="View\Formbin.Designer.cs">
       <DependentUpon>Formbin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\FormbinUsers.cs">
+    <Compile Include="View\FormbinUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\FormbinUsers.Designer.cs">
+    <Compile Include="View\FormbinUsers.Designer.cs">
       <DependentUpon>FormbinUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\InformationObrozovaniySotrudnik.cs">
+    <Compile Include="View\InformationObrozovaniySotrudnik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\InformationObrozovaniySotrudnik.Designer.cs">
+    <Compile Include="View\InformationObrozovaniySotrudnik.Designer.cs">
       <DependentUpon>InformationObrozovaniySotrudnik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\PassportSotrudnik.cs">
+    <Compile Include="View\PassportSotrudnik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\PassportSotrudnik.Designer.cs">
+    <Compile Include="View\PassportSotrudnik.Designer.cs">
       <DependentUpon>PassportSotrudnik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\Registration.cs">
+    <Compile Include="View\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\Registration.Designer.cs">
+    <Compile Include="View\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\InformationSotrudnik.cs">
+    <Compile Include="View\InformationSotrudnik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\InformationSotrudnik.Designer.cs">
+    <Compile Include="View\InformationSotrudnik.Designer.cs">
       <DependentUpon>InformationSotrudnik.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Print.cs" />
-    <Compile Include="Presenter\WarUchet.cs">
+    <Compile Include="View\WarUchet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presenter\WarUchet.Designer.cs">
+    <Compile Include="View\WarUchet.Designer.cs">
       <DependentUpon>WarUchet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PP_KADNIKOV3DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PP_KADNIKOV3DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\ShadowedForm.resx">
       <DependentUpon>ShadowedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\autorization.resx">
+    <EmbeddedResource Include="View\autorization.resx">
       <DependentUpon>autorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\Doljnost.resx">
+    <EmbeddedResource Include="View\Doljnost.resx">
       <DependentUpon>Doljnost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\SotrudnikDopDokument.resx">
+    <EmbeddedResource Include="View\SotrudnikDopDokument.resx">
       <DependentUpon>SotrudnikDopDokument.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\Redaktor.resx">
+    <EmbeddedResource Include="View\Redaktor.resx">
       <DependentUpon>Redaktor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\Staj.resx">
+    <EmbeddedResource Include="View\Staj.resx">
       <DependentUpon>Staj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\InformationFamilySotrudnik.resx">
+    <EmbeddedResource Include="View\InformationFamilySotrudnik.resx">
       <DependentUpon>InformationFamilySotrudnik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\Formbin.resx">
+    <EmbeddedResource Include="View\Formbin.resx">
       <DependentUpon>Formbin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\FormbinUsers.resx">
+    <EmbeddedResource Include="View\FormbinUsers.resx">
       <DependentUpon>FormbinUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\InformationObrozovaniySotrudnik.resx">
+    <EmbeddedResource Include="View\InformationObrozovaniySotrudnik.resx">
       <DependentUpon>InformationObrozovaniySotrudnik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\PassportSotrudnik.resx">
+    <EmbeddedResource Include="View\PassportSotrudnik.resx">
       <DependentUpon>PassportSotrudnik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\Registration.resx">
+    <EmbeddedResource Include="View\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\InformationSotrudnik.resx">
+    <EmbeddedResource Include="View\InformationSotrudnik.resx">
       <DependentUpon>InformationSotrudnik.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presenter\WarUchet.resx">
+    <EmbeddedResource Include="View\WarUchet.resx">
       <DependentUpon>WarUchet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -592,26 +589,15 @@
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
-    <None Include="bin\Debug\TrudDog.docx" />
-    <EntityDeploy Include="Models\Database.edmx">
+    <EntityDeploy Include="Base\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Database.edmx.diagram">
-      <DependentUpon>Database.edmx</DependentUpon>
+    <None Include="Base\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
+    <None Include="bin\Debug\TrudDog.docx" />
     <None Include="packages.config" />
-    <None Include="PP_KADNIKOV3DataSet.xsc">
-      <DependentUpon>PP_KADNIKOV3DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PP_KADNIKOV3DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PP_KADNIKOV3DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PP_KADNIKOV3DataSet.xss">
-      <DependentUpon>PP_KADNIKOV3DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -707,17 +693,34 @@
     <None Include="Resources\1438206457_Refresh.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Base\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="MetroFramework.txt" />
-    <Content Include="Models\Database.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Database.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.cs</LastGenOutput>
-    </Content>
+    <None Include="Resources\1486564399-close_815124.png" />
+    <None Include="Resources\1486564399-close_815123.png" />
+    <None Include="Resources\1486564399-close_815122.png" />
+    <None Include="Resources\1486564399-close_815121.png" />
+    <None Include="Resources\1486564399-close_81512.png" />
+    <None Include="Resources\close_circle_icon_242561.png" />
+    <None Include="Resources\closecircle_1110161.png" />
+    <None Include="Resources\closecircle_111016.png" />
+    <None Include="Resources\free-icon-padlock-7625705.png" />
+    <None Include="Resources\free-icon-user-511587.png" />
+    <None Include="Resources\123-TxQwd3PGy-transformed.png" />
+    <None Include="Resources\Безымянный.png" />
+    <None Include="Resources\free-icon-lock-8472244.png" />
+    <None Include="Resources\free-icon-avatar-6387915.png" />
+    <None Include="Resources\1679045007_bogatyr-club-p-fon-kompaniya-foni-oboi-101.jpg" />
+    <None Include="Resources\1679045007_bogatyr-club-p-fon-kompaniya-foni-oboi-10.jpg" />
+    <None Include="Resources\pngegg.png" />
     <None Include="Resources\244109.png" />
     <None Include="Resources\md_5b33460fe6357.jpg" />
     <None Include="Resources\png-transparent-passport-icon-red-passport-miscellaneous-rectangle-logo.png" />

@@ -1,10 +1,6 @@
-﻿using Examen.Models;
-using System;
-using System.Collections.Generic;
+﻿using Examen.Base;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Examen.Core

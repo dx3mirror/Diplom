@@ -120,7 +120,6 @@ C:\Users\HP\Desktop\Программы C#\Examen\Examen\obj\Debug\Examen.Main.In
 C:\Users\HP\Desktop\Программы C#\Examen\Examen\obj\Debug\Examen.Main.PassportSotrudnik.resources
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.Controls.ShadowedForm.resources
-C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.frmMain.resources
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.Main.autorization.resources
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.Main.InformationFamilySotrudnik.resources
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.Main.Formbin.resources
@@ -570,7 +569,6 @@ C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.Main.Staj.resources
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.Main.WarUchet.resources
 C:\Users\HP\Desktop\Examen\Examen\obj\Debug\Examen.exe.licenses
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Aspose.Words.xml
-C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\EntityFramework.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Microsoft.Win32.Registry.xml
@@ -612,5 +610,4 @@ C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\HP\Desktop\Examen\Examen\bin\Debug\Bunifu.Dataviz.WinForms.xml
 C:\Users\HP\Desktop\Examen\Examen\bin\Debug\SautinSoft.PdfFocus.xml

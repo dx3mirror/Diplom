@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PP_KADNIKOV3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdditionalDocuments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk" Type="Int32" />
+    <Property Name="SNILS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="POLIS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="INN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="KPP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TrudKnijka" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MedKnikjka" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="doljnost">
+    <Key>
+      <PropertyRef Name="ID_D" />
+    </Key>
+    <Property Name="ID_D" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_kod_sotrudnik" Type="Int32" />
+    <Property Name="naimenoviy_doljnosti" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="s_kogo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="po_kokoe" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="kol_vo" Type="Int32" />
+    <Property Name="otvetstveniy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_Sotrudnik" Type="Int32" />
+    <Property Name="obchyi_day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="obchyi_month" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="obchyi_year" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nepreryvniy_day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nepreryvniy_month" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nepreryvniy_year" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vislugalet_day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vislugalet_month" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="vislugalet_year" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="stajrabotyposostoyaniyna" Type="DateTime" Precision="0" />
+    <Property Name="del" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Family">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_sotrudnik" Type="Int32" />
+    <Property Name="FIO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="stepen_rodstva" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="data_rojdeniya" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Sotrudnik" Relationship="Self.FK__Family__FK_sotru__3F466844" FromRole="Family" ToRole="Sotrudnik" />
+  </EntityType>
+  <EntityType Name="Obrazovanie">
+    <Key>
+      <PropertyRef Name="ID_OB" />
+    </Key>
+    <Property Name="ID_OB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_kod_sotrudnika" Type="Int32" />
+    <Property Name="obrazovanie1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nazvanieuchrejdeniya" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="kvalifikachiyapoObrazovaniyu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nazvanieuchrejdeniya2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="kvalifikachiyapoObrazovaniyu2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="poslevuzovoe" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="professiaOsnova" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="professiaDopolnitel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sotrudnik" Relationship="Self.FK__Obrazovan__fk_ko__4222D4EF" FromRole="Obrazovanie" ToRole="Sotrudnik" />
+  </EntityType>
+  <EntityType Name="Otpusk">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_sotrudnik" Type="Int32" />
+    <Property Name="vid_otpuska" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="period_s" Type="DateTime" Precision="3" />
+    <Property Name="period_po" Type="DateTime" Precision="3" />
+    <Property Name="day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="S_kakogo" Type="DateTime" Precision="3" />
+    <Property Name="po_kakoe" Type="DateTime" Precision="3" />
+    <Property Name="prichina" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sotrudnik" Relationship="Self.FK__Otpusk__FK_sotru__44FF419A" FromRole="Otpusk" ToRole="Sotrudnik" />
+  </EntityType>
+  <EntityType Name="Passport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_Sotrudnik" Type="Int32" />
+    <Property Name="nomer_pasporta" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="datavidachi" Type="DateTime" Precision="3" />
+    <Property Name="dataregistrachii_po_mestu" Type="DateTime" Precision="3" />
+    <Property Name="vidan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="adressjitelstva_popasportu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aress_fakticheskiy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sotrudnik" Relationship="Self.FK__Passport__FK_Sot__47DBAE45" FromRole="Passport" ToRole="Sotrudnik" />
+  </EntityType>
+  <EntityType Name="Sotrudnik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nam" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="patronomic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="adress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mestorojdenia" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="datarojdeniya" Type="DateTime" Precision="3" />
+    <Property Name="in_yaz" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="grajdanstvo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="brak" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="del" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="uvolen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mesto_rojd" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Pol" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Identitynomer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OKIN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Family" Relationship="Self.FK__Family__FK_sotru__3F466844" FromRole="Sotrudnik" ToRole="Family" />
+    <NavigationProperty Name="Obrazovanie" Relationship="Self.FK__Obrazovan__fk_ko__4222D4EF" FromRole="Sotrudnik" ToRole="Obrazovanie" />
+    <NavigationProperty Name="Otpusk" Relationship="Self.FK__Otpusk__FK_sotru__44FF419A" FromRole="Sotrudnik" ToRole="Otpusk" />
+    <NavigationProperty Name="Passport" Relationship="Self.FK__Passport__FK_Sot__47DBAE45" FromRole="Sotrudnik" ToRole="Passport" />
+    <NavigationProperty Name="Waruchet" Relationship="Self.FK__Waruchet__FK_sot__5070F446" FromRole="Sotrudnik" ToRole="Waruchet" />
+  </EntityType>
+  <EntityType Name="Transactionprogram">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameLog" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateLog" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="usersProgram">
+    <Key>
+      <PropertyRef Name="ID_dol" />
+    </Key>
+    <Property Name="ID_dol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="loginI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PasI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="acces" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Avatar" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ima" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Family" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Oth" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Waruchet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_sotrudnik" Type="Int32" />
+    <Property Name="Kategorya" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Zvanie" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Sostav" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="kod_VUS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Sostoyanie_voinskogo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Nazvanie_komisariata" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Kategoria" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sotrudnik" Relationship="Self.FK__Waruchet__FK_sot__5070F446" FromRole="Waruchet" ToRole="Sotrudnik" />
+  </EntityType>
+  <EntityType Name="ZayvleniyJob">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ima" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Family" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Oth" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Doljnost" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="del" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__Family__FK_sotru__3F466844">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Family" Type="Self.Family" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Family">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Obrazovan__fk_ko__4222D4EF">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Obrazovanie" Type="Self.Obrazovanie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obrazovanie">
+        <PropertyRef Name="fk_kod_sotrudnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Otpusk__FK_sotru__44FF419A">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Otpusk" Type="Self.Otpusk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Otpusk">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Passport__FK_Sot__47DBAE45">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Passport">
+        <PropertyRef Name="FK_Sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Waruchet__FK_sot__5070F446">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Waruchet" Type="Self.Waruchet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Waruchet">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PP_KADNIKOV3Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdditionalDocuments" EntityType="Self.AdditionalDocuments" />
+    <EntitySet Name="doljnost" EntityType="Self.doljnost" />
+    <EntitySet Name="Experience" EntityType="Self.Experience" />
+    <EntitySet Name="Family" EntityType="Self.Family" />
+    <EntitySet Name="Obrazovanie" EntityType="Self.Obrazovanie" />
+    <EntitySet Name="Otpusk" EntityType="Self.Otpusk" />
+    <EntitySet Name="Passport" EntityType="Self.Passport" />
+    <EntitySet Name="Sotrudnik" EntityType="Self.Sotrudnik" />
+    <EntitySet Name="Transactionprogram" EntityType="Self.Transactionprogram" />
+    <EntitySet Name="usersProgram" EntityType="Self.usersProgram" />
+    <EntitySet Name="Waruchet" EntityType="Self.Waruchet" />
+    <EntitySet Name="ZayvleniyJob" EntityType="Self.ZayvleniyJob" />
+    <AssociationSet Name="FK__Family__FK_sotru__3F466844" Association="Self.FK__Family__FK_sotru__3F466844">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Family" EntitySet="Family" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Obrazovan__fk_ko__4222D4EF" Association="Self.FK__Obrazovan__fk_ko__4222D4EF">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Obrazovanie" EntitySet="Obrazovanie" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Otpusk__FK_sotru__44FF419A" Association="Self.FK__Otpusk__FK_sotru__44FF419A">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Otpusk" EntitySet="Otpusk" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Passport__FK_Sot__47DBAE45" Association="Self.FK__Passport__FK_Sot__47DBAE45">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Passport" EntitySet="Passport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Waruchet__FK_sot__5070F446" Association="Self.FK__Waruchet__FK_sot__5070F446">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Waruchet" EntitySet="Waruchet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

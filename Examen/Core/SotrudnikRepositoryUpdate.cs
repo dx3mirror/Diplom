@@ -1,4 +1,4 @@
-﻿using Examen.Models;
+﻿using Examen.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Examen.Core
 {
     public class SotrudnikRepositoryUpdate : ISotrudnikRepositoryUpdate
     {
-        private readonly Models.PP_KADNIKOV3Entities _context;
+        private readonly Base.PP_KADNIKOV3Entities _context;
 
-        public SotrudnikRepositoryUpdate(Models.PP_KADNIKOV3Entities context)
+        public SotrudnikRepositoryUpdate(Base.PP_KADNIKOV3Entities context)
         {
             _context = context;
         }

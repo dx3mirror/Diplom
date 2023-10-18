@@ -9,16 +9,16 @@ namespace Examen.Core
 {
     public class UnitOfWorkDelete : IDisposable
     {
-        private Models.PP_KADNIKOV3Entities context;
+        private Base.PP_KADNIKOV3Entities context;
         private DbContextTransaction transaction;
 
         public UnitOfWorkDelete()
         {
-            context = new Models.PP_KADNIKOV3Entities();
+            context = new Base.PP_KADNIKOV3Entities();
             transaction = context.Database.BeginTransaction();
         }
 
-        public Models.PP_KADNIKOV3Entities Context
+        public Base.PP_KADNIKOV3Entities Context
         {
             get { return context; }
         }

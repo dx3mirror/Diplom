@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PP_KADNIKOV3ModelContainer" CdmEntityContainer="PP_KADNIKOV3Entities">
+    <EntitySetMapping Name="AdditionalDocuments">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.AdditionalDocuments">
+        <MappingFragment StoreEntitySet="AdditionalDocuments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="fk" ColumnName="fk" />
+          <ScalarProperty Name="SNILS" ColumnName="SNILS" />
+          <ScalarProperty Name="POLIS" ColumnName="POLIS" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="KPP" ColumnName="KPP" />
+          <ScalarProperty Name="TrudKnijka" ColumnName="TrudKnijka" />
+          <ScalarProperty Name="MedKnikjka" ColumnName="MedKnikjka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doljnost">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.doljnost">
+        <MappingFragment StoreEntitySet="doljnost">
+          <ScalarProperty Name="ID_D" ColumnName="ID_D" />
+          <ScalarProperty Name="fk_kod_sotrudnik" ColumnName="fk_kod_sotrudnik" />
+          <ScalarProperty Name="naimenoviy_doljnosti" ColumnName="naimenoviy_doljnosti" />
+          <ScalarProperty Name="s_kogo" ColumnName="s_kogo" />
+          <ScalarProperty Name="po_kokoe" ColumnName="po_kokoe" />
+          <ScalarProperty Name="kol_vo" ColumnName="kol_vo" />
+          <ScalarProperty Name="otvetstveniy" ColumnName="otvetstveniy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Experience">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Experience">
+        <MappingFragment StoreEntitySet="Experience">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FK_Sotrudnik" ColumnName="FK_Sotrudnik" />
+          <ScalarProperty Name="obchyi_day" ColumnName="obchyi_day" />
+          <ScalarProperty Name="obchyi_month" ColumnName="obchyi_month" />
+          <ScalarProperty Name="obchyi_year" ColumnName="obchyi_year" />
+          <ScalarProperty Name="nepreryvniy_day" ColumnName="nepreryvniy_day" />
+          <ScalarProperty Name="nepreryvniy_month" ColumnName="nepreryvniy_month" />
+          <ScalarProperty Name="nepreryvniy_year" ColumnName="nepreryvniy_year" />
+          <ScalarProperty Name="vislugalet_day" ColumnName="vislugalet_day" />
+          <ScalarProperty Name="vislugalet_month" ColumnName="vislugalet_month" />
+          <ScalarProperty Name="vislugalet_year" ColumnName="vislugalet_year" />
+          <ScalarProperty Name="stajrabotyposostoyaniyna" ColumnName="stajrabotyposostoyaniyna" />
+          <ScalarProperty Name="del" ColumnName="del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Family">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Family">
+        <MappingFragment StoreEntitySet="Family">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FK_sotrudnik" ColumnName="FK_sotrudnik" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="stepen_rodstva" ColumnName="stepen_rodstva" />
+          <ScalarProperty Name="data_rojdeniya" ColumnName="data_rojdeniya" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Obrazovanie">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Obrazovanie">
+        <MappingFragment StoreEntitySet="Obrazovanie">
+          <ScalarProperty Name="ID_OB" ColumnName="ID_OB" />
+          <ScalarProperty Name="fk_kod_sotrudnika" ColumnName="fk_kod_sotrudnika" />
+          <ScalarProperty Name="obrazovanie1" ColumnName="obrazovanie" />
+          <ScalarProperty Name="nazvanieuchrejdeniya" ColumnName="nazvanieuchrejdeniya" />
+          <ScalarProperty Name="kvalifikachiyapoObrazovaniyu" ColumnName="kvalifikachiyapoObrazovaniyu" />
+          <ScalarProperty Name="nazvanieuchrejdeniya2" ColumnName="nazvanieuchrejdeniya2" />
+          <ScalarProperty Name="kvalifikachiyapoObrazovaniyu2" ColumnName="kvalifikachiyapoObrazovaniyu2" />
+          <ScalarProperty Name="poslevuzovoe" ColumnName="poslevuzovoe" />
+          <ScalarProperty Name="professiaOsnova" ColumnName="professiaOsnova" />
+          <ScalarProperty Name="professiaDopolnitel" ColumnName="professiaDopolnitel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Otpusk">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Otpusk">
+        <MappingFragment StoreEntitySet="Otpusk">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FK_sotrudnik" ColumnName="FK_sotrudnik" />
+          <ScalarProperty Name="vid_otpuska" ColumnName="vid_otpuska" />
+          <ScalarProperty Name="period_s" ColumnName="period_s" />
+          <ScalarProperty Name="period_po" ColumnName="period_po" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="S_kakogo" ColumnName="S_kakogo" />
+          <ScalarProperty Name="po_kakoe" ColumnName="po_kakoe" />
+          <ScalarProperty Name="prichina" ColumnName="prichina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Passport">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Passport">
+        <MappingFragment StoreEntitySet="Passport">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FK_Sotrudnik" ColumnName="FK_Sotrudnik" />
+          <ScalarProperty Name="nomer_pasporta" ColumnName="nomer_pasporta" />
+          <ScalarProperty Name="datavidachi" ColumnName="datavidachi" />
+          <ScalarProperty Name="dataregistrachii_po_mestu" ColumnName="dataregistrachii_po_mestu" />
+          <ScalarProperty Name="vidan" ColumnName="vidan" />
+          <ScalarProperty Name="adressjitelstva_popasportu" ColumnName="adressjitelstva_popasportu" />
+          <ScalarProperty Name="aress_fakticheskiy" ColumnName="aress_fakticheskiy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sotrudnik">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Sotrudnik">
+        <MappingFragment StoreEntitySet="Sotrudnik">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="nam" ColumnName="nam" />
+          <ScalarProperty Name="patronomic" ColumnName="patronomic" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="mestorojdenia" ColumnName="mestorojdenia" />
+          <ScalarProperty Name="datarojdeniya" ColumnName="datarojdeniya" />
+          <ScalarProperty Name="in_yaz" ColumnName="in_yaz" />
+          <ScalarProperty Name="grajdanstvo" ColumnName="grajdanstvo" />
+          <ScalarProperty Name="brak" ColumnName="brak" />
+          <ScalarProperty Name="del" ColumnName="del" />
+          <ScalarProperty Name="uvolen" ColumnName="uvolen" />
+          <ScalarProperty Name="mesto_rojd" ColumnName="mesto_rojd" />
+          <ScalarProperty Name="Pol" ColumnName="Pol" />
+          <ScalarProperty Name="Identitynomer" ColumnName="Identitynomer" />
+          <ScalarProperty Name="OKIN" ColumnName="OKIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactionprogram">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Transactionprogram">
+        <MappingFragment StoreEntitySet="Transactionprogram">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameLog" ColumnName="NameLog" />
+          <ScalarProperty Name="DateLog" ColumnName="DateLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersProgram">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.usersProgram">
+        <MappingFragment StoreEntitySet="usersProgram">
+          <ScalarProperty Name="ID_dol" ColumnName="ID_dol" />
+          <ScalarProperty Name="loginI" ColumnName="loginI" />
+          <ScalarProperty Name="PasI" ColumnName="PasI" />
+          <ScalarProperty Name="acces" ColumnName="acces" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Ima" ColumnName="Ima" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="Oth" ColumnName="Oth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Waruchet">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.Waruchet">
+        <MappingFragment StoreEntitySet="Waruchet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FK_sotrudnik" ColumnName="FK_sotrudnik" />
+          <ScalarProperty Name="Kategorya" ColumnName="Kategorya" />
+          <ScalarProperty Name="Zvanie" ColumnName="Zvanie" />
+          <ScalarProperty Name="Sostav" ColumnName="Sostav" />
+          <ScalarProperty Name="kod_VUS" ColumnName="kod_VUS" />
+          <ScalarProperty Name="Sostoyanie_voinskogo" ColumnName="Sostoyanie_voinskogo" />
+          <ScalarProperty Name="Nazvanie_komisariata" ColumnName="Nazvanie_komisariata" />
+          <ScalarProperty Name="Kategoria" ColumnName="Kategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZayvleniyJob">
+      <EntityTypeMapping TypeName="PP_KADNIKOV3Model.ZayvleniyJob">
+        <MappingFragment StoreEntitySet="ZayvleniyJob">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ima" ColumnName="Ima" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="Oth" ColumnName="Oth" />
+          <ScalarProperty Name="Doljnost" ColumnName="Doljnost" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="del" ColumnName="del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

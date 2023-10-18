@@ -1,9 +1,5 @@
-﻿using Examen.Models;
-using System;
-using System.Collections.Generic;
+﻿using Examen.Base;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Examen.Core
@@ -17,7 +13,7 @@ namespace Examen.Core
             context = new PP_KADNIKOV3Entities();
         }
 
-        public async Task<Models.usersProgram> GetUserProgramAsync(int userId)
+        public async Task<Base.usersProgram> GetUserProgramAsync(int userId)
         {
             return await context.usersProgram.FirstOrDefaultAsync(u => u.ID_dol == userId);
         }

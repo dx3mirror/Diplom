@@ -40,9 +40,9 @@ namespace Examen.Core
             {
                 try
                 {
-                    using (var context = new Models.PP_KADNIKOV3Entities())
+                    using (var context = new Base.PP_KADNIKOV3Entities())
                     {
-                        var user = new Models.usersProgram()
+                        var user = new  Base.usersProgram()
                         {
                             loginI = _login,
                             PasI = _password,

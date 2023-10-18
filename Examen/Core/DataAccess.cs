@@ -9,25 +9,25 @@ namespace Examen.Core
 {
     public class DataAccess : IDataAccess
     {
-        private readonly Models.PP_KADNIKOV3Entities _context;
+        private readonly Base.PP_KADNIKOV3Entities _context;
 
         public DataAccess()
         {
-            _context = new Models.PP_KADNIKOV3Entities();
+            _context = new Base.PP_KADNIKOV3Entities();
         }
 
-        public async Task AddObrazovanie(Models.Obrazovanie obrazovanie)
+        public async Task AddObrazovanie(Base.Obrazovanie obrazovanie)
         {
             _context.Obrazovanie.Add(obrazovanie);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Models.Obrazovanie> GetObrazovanieById(int obrazovanieId)
+        public async Task<Base.Obrazovanie> GetObrazovanieById(int obrazovanieId)
         {
             return await _context.Obrazovanie.FindAsync(obrazovanieId);
         }
 
-        public async Task UpdateObrazovanie(Models.Obrazovanie obrazovanie)
+        public async Task UpdateObrazovanie(Base.Obrazovanie obrazovanie)
         {
             _context.Entry(obrazovanie).State = EntityState.Modified;
             await _context.SaveChangesAsync();

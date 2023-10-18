@@ -8,12 +8,12 @@ namespace Examen.Core
 {
     public class UnitOfWorkAddSotrudnik : IDisposable
     {
-        private Models.PP_KADNIKOV3Entities context;
+        private Base.PP_KADNIKOV3Entities context;
         private SotrudnikRepositoryAdd sotrudnikRepository;
 
         public UnitOfWorkAddSotrudnik()
         {
-            context = new Models.PP_KADNIKOV3Entities();
+            context = new Base.PP_KADNIKOV3Entities();
         }
 
         public SotrudnikRepositoryAdd SotrudnikRepository

@@ -8,9 +8,9 @@ namespace Examen.Core
 {
     public class RepositorySotrudnikObrozovaniy<T> : IRepositorySotrudnikObrozovaniy<T> where T : class
     {
-        protected readonly Models.PP_KADNIKOV3Entities _context;
+        protected readonly Base.PP_KADNIKOV3Entities _context;
 
-        public RepositorySotrudnikObrozovaniy(Models.PP_KADNIKOV3Entities context)
+        public RepositorySotrudnikObrozovaniy(Base.PP_KADNIKOV3Entities context)
         {
             _context = context;
         }

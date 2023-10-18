@@ -63,6 +63,16 @@ namespace Examen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _123_TxQwd3PGy_transformed {
+            get {
+                object obj = ResourceManager.GetObject("123-TxQwd3PGy-transformed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _1286853 {
             get {
                 object obj = ResourceManager.GetObject("1286853", resourceCulture);
@@ -163,6 +173,76 @@ namespace Examen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _1486564399_close_81512 {
+            get {
+                object obj = ResourceManager.GetObject("1486564399-close_81512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _1486564399_close_815121 {
+            get {
+                object obj = ResourceManager.GetObject("1486564399-close_815121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _1486564399_close_815122 {
+            get {
+                object obj = ResourceManager.GetObject("1486564399-close_815122", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _1486564399_close_815123 {
+            get {
+                object obj = ResourceManager.GetObject("1486564399-close_815123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _1486564399_close_815124 {
+            get {
+                object obj = ResourceManager.GetObject("1486564399-close_815124", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _1679045007_bogatyr_club_p_fon_kompaniya_foni_oboi_10 {
+            get {
+                object obj = ResourceManager.GetObject("1679045007_bogatyr-club-p-fon-kompaniya-foni-oboi-10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap _1679045007_bogatyr_club_p_fon_kompaniya_foni_oboi_101 {
+            get {
+                object obj = ResourceManager.GetObject("1679045007_bogatyr-club-p-fon-kompaniya-foni-oboi-101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap _244109 {
             get {
                 object obj = ResourceManager.GetObject("244109", resourceCulture);
@@ -176,6 +256,36 @@ namespace Examen.Properties {
         public static System.Drawing.Bitmap about {
             get {
                 object obj = ResourceManager.GetObject("about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap close_circle_icon_242561 {
+            get {
+                object obj = ResourceManager.GetObject("close_circle_icon_242561", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap closecircle_111016 {
+            get {
+                object obj = ResourceManager.GetObject("closecircle_111016", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap closecircle_1110161 {
+            get {
+                object obj = ResourceManager.GetObject("closecircle_1110161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +306,46 @@ namespace Examen.Properties {
         public static System.Drawing.Bitmap excel {
             get {
                 object obj = ResourceManager.GetObject("excel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap free_icon_avatar_6387915 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-avatar-6387915", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap free_icon_lock_8472244 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-lock-8472244", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap free_icon_padlock_7625705 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-padlock-7625705", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap free_icon_user_511587 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-user-511587", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -284,6 +434,16 @@ namespace Examen.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap pngegg {
+            get {
+                object obj = ResourceManager.GetObject("pngegg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap pngtree_two_passports_icon_outline_style_png_image_1826563 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-two-passports-icon-outline-style-png-image_1826563", resourceCulture);
@@ -357,6 +517,16 @@ namespace Examen.Properties {
         public static System.Drawing.Bitmap view {
             get {
                 object obj = ResourceManager.GetObject("view", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Безымянный {
+            get {
+                object obj = ResourceManager.GetObject("Безымянный", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

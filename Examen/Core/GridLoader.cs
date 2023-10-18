@@ -1,4 +1,4 @@
-﻿using Examen.Models;
+﻿using Examen.Base;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +19,7 @@ namespace Examen.Core
             this.sotrudnikRepository = sotrudnikRepository;
             this.sotrudnikBuilder = sotrudnikBuilder;
         }
-        public async Task LoadGrid(DataGridView DGV_Sotrudniki, CheckBox checkBox_deleted, string customSelect = null)
+        public async Task LoadGrid(DataGridView DGV_Sotrudniki, Bunifu.UI.WinForms.BunifuCheckBox checkBox_deleted, string customSelect = null)
         {
             if (customSelect == null)
             {

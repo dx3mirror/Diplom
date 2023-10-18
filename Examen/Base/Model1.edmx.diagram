@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a6f4411c2aa04993bb77a20cd9dfbcbc" Name="Diagram1">
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.AdditionalDocuments" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.doljnost" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Experience" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Family" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Obrazovanie" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Otpusk" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Passport" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Sotrudnik" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Transactionprogram" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.usersProgram" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.Waruchet" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PP_KADNIKOV3Model.ZayvleniyJob" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="PP_KADNIKOV3Model.FK__Family__FK_sotru__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="PP_KADNIKOV3Model.FK__Obrazovan__fk_ko__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="PP_KADNIKOV3Model.FK__Otpusk__FK_sotru__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="PP_KADNIKOV3Model.FK__Passport__FK_Sot__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="PP_KADNIKOV3Model.FK__Waruchet__FK_sot__5070F446" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

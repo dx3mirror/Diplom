@@ -1,4 +1,4 @@
-﻿using Examen.Models;
+﻿using Examen.Base;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Examen.Core
 {
-    public class PassportRepository : IRepository<Models.Passport>
+    public class PassportRepository : IRepository<Base.Passport>
     {
-        private Models.PP_KADNIKOV3Entities context;
+        private Base.PP_KADNIKOV3Entities context;
         private static PassportRepository instance;
         private readonly PP_KADNIKOV3Entities db;
         private PassportRepository()
@@ -64,27 +64,27 @@ namespace Examen.Core
         }
     
 
-    public PassportRepository(Models.PP_KADNIKOV3Entities context)
+    public PassportRepository(Base.PP_KADNIKOV3Entities context)
         {
             this.context = context;
         }
 
-        public async Task<Models.Passport> GetFirstOrDefaultAsync(Expression<Func<Models.Passport, bool>> predicate)
+        public async Task<Base.Passport> GetFirstOrDefaultAsync(Expression<Func<Base.Passport, bool>> predicate)
         {
             return await context.Passport.FirstOrDefaultAsync(predicate);
         }
 
-        public void Add(Models.Passport passport)
+        public void Add(Base.Passport passport)
         {
             context.Passport.Add(passport);
         }
 
-        public void Update(Models.Passport passport)
+        public void Update(Base.Passport passport)
         {
             context.Entry(passport).State = EntityState.Modified;
         }
 
-        public void Delete(Models.Passport passport)
+        public void Delete(Base.Passport passport)
         {
             context.Passport.Remove(passport);
         }

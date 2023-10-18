@@ -20,7 +20,7 @@ namespace Examen.Core
         {
             try
             {
-                var obrazovanieModel = new Models.Obrazovanie
+                var obrazovanieModel = new Base.Obrazovanie
                 {
                     fk_kod_sotrudnika = Core.Database.userId,
                     obrazovanie1 = obrazovanie,

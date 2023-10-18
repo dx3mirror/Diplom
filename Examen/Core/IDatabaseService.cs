@@ -1,4 +1,4 @@
-﻿using Examen.Models;
+﻿using Examen.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace Examen.Core
 {
     public interface IDatabaseService
     {
-        Task<Models.usersProgram> GetUserProgramAsync(int userId);
+        Task<Base.usersProgram> GetUserProgramAsync(int userId);
     }
 }

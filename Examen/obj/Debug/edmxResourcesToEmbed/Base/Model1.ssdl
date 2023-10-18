@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PP_KADNIKOV3Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdditionalDocuments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk" Type="int" />
+    <Property Name="SNILS" Type="nvarchar" MaxLength="255" />
+    <Property Name="POLIS" Type="nvarchar" MaxLength="255" />
+    <Property Name="INN" Type="nvarchar" MaxLength="255" />
+    <Property Name="KPP" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrudKnijka" Type="nvarchar" MaxLength="255" />
+    <Property Name="MedKnikjka" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="doljnost">
+    <Key>
+      <PropertyRef Name="ID_D" />
+    </Key>
+    <Property Name="ID_D" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_kod_sotrudnik" Type="int" />
+    <Property Name="naimenoviy_doljnosti" Type="nvarchar" MaxLength="255" />
+    <Property Name="s_kogo" Type="nvarchar" MaxLength="255" />
+    <Property Name="po_kokoe" Type="nvarchar" MaxLength="255" />
+    <Property Name="kol_vo" Type="int" />
+    <Property Name="otvetstveniy" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_Sotrudnik" Type="int" />
+    <Property Name="obchyi_day" Type="nvarchar" MaxLength="255" />
+    <Property Name="obchyi_month" Type="nvarchar" MaxLength="255" />
+    <Property Name="obchyi_year" Type="nvarchar" MaxLength="255" />
+    <Property Name="nepreryvniy_day" Type="nvarchar" MaxLength="255" />
+    <Property Name="nepreryvniy_month" Type="nvarchar" MaxLength="255" />
+    <Property Name="nepreryvniy_year" Type="nvarchar" MaxLength="255" />
+    <Property Name="vislugalet_day" Type="nvarchar" MaxLength="255" />
+    <Property Name="vislugalet_month" Type="nvarchar" MaxLength="255" />
+    <Property Name="vislugalet_year" Type="nvarchar" MaxLength="255" />
+    <Property Name="stajrabotyposostoyaniyna" Type="date" />
+    <Property Name="del" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Family">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_sotrudnik" Type="int" />
+    <Property Name="FIO" Type="nvarchar" MaxLength="255" />
+    <Property Name="stepen_rodstva" Type="nvarchar" MaxLength="255" />
+    <Property Name="data_rojdeniya" Type="date" />
+  </EntityType>
+  <EntityType Name="Obrazovanie">
+    <Key>
+      <PropertyRef Name="ID_OB" />
+    </Key>
+    <Property Name="ID_OB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_kod_sotrudnika" Type="int" />
+    <Property Name="obrazovanie" Type="nvarchar" MaxLength="255" />
+    <Property Name="nazvanieuchrejdeniya" Type="nvarchar" MaxLength="255" />
+    <Property Name="kvalifikachiyapoObrazovaniyu" Type="nvarchar" MaxLength="255" />
+    <Property Name="nazvanieuchrejdeniya2" Type="nvarchar" MaxLength="255" />
+    <Property Name="kvalifikachiyapoObrazovaniyu2" Type="nvarchar" MaxLength="255" />
+    <Property Name="poslevuzovoe" Type="nvarchar" MaxLength="255" />
+    <Property Name="professiaOsnova" Type="nvarchar" MaxLength="255" />
+    <Property Name="professiaDopolnitel" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Otpusk">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_sotrudnik" Type="int" />
+    <Property Name="vid_otpuska" Type="nvarchar" MaxLength="255" />
+    <Property Name="period_s" Type="datetime" />
+    <Property Name="period_po" Type="datetime" />
+    <Property Name="day" Type="nvarchar" MaxLength="255" />
+    <Property Name="S_kakogo" Type="datetime" />
+    <Property Name="po_kakoe" Type="datetime" />
+    <Property Name="prichina" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Passport">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_Sotrudnik" Type="int" />
+    <Property Name="nomer_pasporta" Type="nvarchar" MaxLength="255" />
+    <Property Name="datavidachi" Type="datetime" />
+    <Property Name="dataregistrachii_po_mestu" Type="datetime" />
+    <Property Name="vidan" Type="nvarchar" MaxLength="255" />
+    <Property Name="adressjitelstva_popasportu" Type="nvarchar(max)" />
+    <Property Name="aress_fakticheskiy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Sotrudnik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lastname" Type="nvarchar" MaxLength="255" />
+    <Property Name="nam" Type="nvarchar" MaxLength="255" />
+    <Property Name="patronomic" Type="nvarchar" MaxLength="255" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="255" />
+    <Property Name="adress" Type="nvarchar" MaxLength="255" />
+    <Property Name="mestorojdenia" Type="nvarchar" MaxLength="255" />
+    <Property Name="datarojdeniya" Type="datetime" />
+    <Property Name="in_yaz" Type="nvarchar" MaxLength="255" />
+    <Property Name="grajdanstvo" Type="nvarchar" MaxLength="255" />
+    <Property Name="brak" Type="nvarchar" MaxLength="255" />
+    <Property Name="del" Type="nvarchar" MaxLength="255" />
+    <Property Name="uvolen" Type="nvarchar" MaxLength="255" />
+    <Property Name="mesto_rojd" Type="nvarchar" MaxLength="255" />
+    <Property Name="Pol" Type="nvarchar" MaxLength="255" />
+    <Property Name="Identitynomer" Type="nvarchar" MaxLength="255" />
+    <Property Name="OKIN" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Transactionprogram">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameLog" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateLog" Type="datetime" />
+  </EntityType>
+  <EntityType Name="usersProgram">
+    <Key>
+      <PropertyRef Name="ID_dol" />
+    </Key>
+    <Property Name="ID_dol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="loginI" Type="nvarchar" MaxLength="100" />
+    <Property Name="PasI" Type="nvarchar" MaxLength="100" />
+    <Property Name="acces" Type="nvarchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varbinary(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ima" Type="nvarchar" MaxLength="100" />
+    <Property Name="Family" Type="nvarchar" MaxLength="100" />
+    <Property Name="Oth" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Waruchet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FK_sotrudnik" Type="int" />
+    <Property Name="Kategorya" Type="nvarchar" MaxLength="100" />
+    <Property Name="Zvanie" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sostav" Type="nvarchar" MaxLength="100" />
+    <Property Name="kod_VUS" Type="nvarchar" MaxLength="100" />
+    <Property Name="Sostoyanie_voinskogo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Nazvanie_komisariata" Type="nvarchar" MaxLength="100" />
+    <Property Name="Kategoria" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ZayvleniyJob">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ima" Type="nvarchar" MaxLength="100" />
+    <Property Name="Family" Type="nvarchar" MaxLength="100" />
+    <Property Name="Oth" Type="nvarchar" MaxLength="100" />
+    <Property Name="Doljnost" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="del" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__Family__FK_sotru__3F466844">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Family" Type="Self.Family" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Family">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Obrazovan__fk_ko__4222D4EF">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Obrazovanie" Type="Self.Obrazovanie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obrazovanie">
+        <PropertyRef Name="fk_kod_sotrudnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Otpusk__FK_sotru__44FF419A">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Otpusk" Type="Self.Otpusk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Otpusk">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Passport__FK_Sot__47DBAE45">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Passport">
+        <PropertyRef Name="FK_Sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Waruchet__FK_sot__5070F446">
+    <End Role="Sotrudnik" Type="Self.Sotrudnik" Multiplicity="0..1" />
+    <End Role="Waruchet" Type="Self.Waruchet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudnik">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Waruchet">
+        <PropertyRef Name="FK_sotrudnik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище PP_KADNIKOV3ModelContainer">
+    <EntitySet Name="AdditionalDocuments" EntityType="Self.AdditionalDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="doljnost" EntityType="Self.doljnost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Experience" EntityType="Self.Experience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Family" EntityType="Self.Family" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Obrazovanie" EntityType="Self.Obrazovanie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Otpusk" EntityType="Self.Otpusk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Passport" EntityType="Self.Passport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sotrudnik" EntityType="Self.Sotrudnik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transactionprogram" EntityType="Self.Transactionprogram" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersProgram" EntityType="Self.usersProgram" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Waruchet" EntityType="Self.Waruchet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZayvleniyJob" EntityType="Self.ZayvleniyJob" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Family__FK_sotru__3F466844" Association="Self.FK__Family__FK_sotru__3F466844">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Family" EntitySet="Family" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Obrazovan__fk_ko__4222D4EF" Association="Self.FK__Obrazovan__fk_ko__4222D4EF">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Obrazovanie" EntitySet="Obrazovanie" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Otpusk__FK_sotru__44FF419A" Association="Self.FK__Otpusk__FK_sotru__44FF419A">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Otpusk" EntitySet="Otpusk" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Passport__FK_Sot__47DBAE45" Association="Self.FK__Passport__FK_Sot__47DBAE45">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Passport" EntitySet="Passport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Waruchet__FK_sot__5070F446" Association="Self.FK__Waruchet__FK_sot__5070F446">
+      <End Role="Sotrudnik" EntitySet="Sotrudnik" />
+      <End Role="Waruchet" EntitySet="Waruchet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

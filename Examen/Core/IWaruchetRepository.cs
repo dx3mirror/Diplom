@@ -8,9 +8,9 @@ namespace Examen.Core
 {
     public interface IWaruchetRepository
     {
-        Task<List<Models.Waruchet>> GetWaruchetByUserId(int userId);
-        Task AddWaruchet(Models.Waruchet waruchet);
-        Task UpdateWaruchet(Models.Waruchet waruchet);
+        Task<List<Base.Waruchet>> GetWaruchetByUserId(int userId);
+        Task AddWaruchet(Base.Waruchet waruchet);
+        Task UpdateWaruchet(Base.Waruchet waruchet);
         Task DeleteWaruchet(int id);
     }
 }

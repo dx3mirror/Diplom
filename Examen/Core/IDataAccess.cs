@@ -8,9 +8,9 @@ namespace Examen.Core
 {
     public interface IDataAccess
     {
-        Task AddObrazovanie(Models.Obrazovanie obrazovanie);
-        Task<Models.Obrazovanie> GetObrazovanieById(int obrazovanieId);
-        Task UpdateObrazovanie(Models.Obrazovanie obrazovanie);
+        Task AddObrazovanie(Base.Obrazovanie obrazovanie);
+        Task<Base.Obrazovanie> GetObrazovanieById(int obrazovanieId);
+        Task UpdateObrazovanie(Base.Obrazovanie obrazovanie);
         Task DeleteObrazovanie(int obrazovanieId);
     }
 }
